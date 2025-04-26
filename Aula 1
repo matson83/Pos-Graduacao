@@ -1,1 +1,93 @@
+# Aula 1 - Design e Arquitetura I
 
+April 12, 2025 
+
+**Método HTTP :**  
+
+- GET
+- PUT
+- POST
+- DELETE
+
+---
+
+**POST :** Manda dados 
+
+**GET :** Recebe os dados 
+
+**PUT :** Edita os dados 
+
+**DELETE :** Deleta os dados
+
+---
+
+**200 - OK**
+
+**201 - CREATED**
+
+**204 - No Contest**
+
+**400 - Bad Request (Campos a menos | mal enviado)**
+
+**401 - (Recebeu o login e senha , porem errados)**
+
+**403 - ForBiden (Autenticado , porem não autorizado)**
+
+---
+
+              ————— Request ————————->
+
+**Cliente**                                                                            **Servidor**
+
+               ←———— Response ————————
+
+- Autenticação
+- Autorização
+
+---
+
+**JWT - JSON WEB TOKEN** 
+
+- Tem estrutura com Header(Informações de como foi gerado) e seus escopos (as chaves /Informações do usuário)
+
+---
+
+**Comunicação síncrona e Assíncrona :**
+
+- Síncrona :Existe uma sincronicidade entre os serviços (eu lhe faço uma pergunta e no mesmo processo você me da uma resposta), mando a requisição e espero a resposta.
+- Assíncrona :Mando a requisição e vou embora .
+
+---
+
+**Modelos de Arquitetura : Monolíticos e Modularizados**
+
+- Monolíticos : Esta em um bloco só . Está junto e misturado .  Facilidade de manutenção , pois tá num canto só . Testabilidade .  Ponto único de falha
+- Monolítico Modularizado :Dividido em módulos , mas ainda estão na mesma base de dados . Tem organização estrutural .
+- Microservices : Faz com que os módulos passam a ser serviços separados evitando o ponto único de falha , cada modulo tem sua base de dados , subdomínios
+
+---
+
+**Conceito do MVC :**
+
+- É **um padrão de arquitetura de software que separa as camadas de um aplicativo em três componentes principais:**
+    - View : Representa a parte do sistema que interage com o usuário, captura de inputs de dados.
+    - Controller : Processa os dados .
+    - Model : Representa a lógica de negócio e manipulação de dados .
+
+---
+
+Princípios SOLID em JAVA :
+
+- S : Single Responsibility Principle (Princípio da responsabilidade única)
+- O : Open-Closed Principle (Princípio Aberto-Fechado) - aberto para extensão e fechado para modificação .
+- L : Liskov Substitution Principle (Princípio da substituição de Liskov) - Se trocar minha superclasse dentro da estrutura do codigo por qualquer subclasse tem que funcionar e não quebrar.
+- I : Interface Segregation Principle (Princípio da Segregação da Interface) - Estabelece que uma classe não deve ser obrigada a depender de interfaces que não utiliza.
+- D : Dependency Inversion Principle (Princípio da inversão da dependência) - Injetar a depêndencia no tempo de compliação , O pai não depende do filho , mas o filho depende do pai.
+
+---
+
+**Herança Múltipla :** Java não suporta herança múltipla, ou seja, uma classe não pode herdar de mais de uma classe. No entanto, é possível implementar mais de uma interface. 
+
+---
+
+Repositório dos projetos :   [https://github.com/via-results](https://github.com/via-results)
